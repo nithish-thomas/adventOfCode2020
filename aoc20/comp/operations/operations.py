@@ -1,15 +1,15 @@
-from aoc20.comp.Computer import Computer
+from aoc20.comp.ExecutionContext import ExecutionContext
 
 
-def jump(computer: Computer, argument: str):
+def jump(computer: ExecutionContext, argument: str):
     computer.cur += int(argument)
 
 
-def accumulator(computer: Computer, argument: str):
+def accumulator(computer: ExecutionContext, argument: str):
     argument = int(argument)
     computer.accumulator += argument
     computer.cur += 1
 
 
-def nop(computer: Computer, _: str):
+def nop(computer: ExecutionContext, _: str):
     computer.cur += 1
